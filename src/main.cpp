@@ -150,7 +150,7 @@ int main(int argc, char* argv[]) {
       out_file_ << measurement_pack_list[k].raw_measurements_(0) << "\t";
       out_file_ << measurement_pack_list[k].raw_measurements_(1) << "\t";
     } else if (measurement_pack_list[k].sensor_type_ == MeasurementPackage::RADAR) {
-      // output the estimation in the cartesian coordinates
+      // output the estimation in the Cartesian coordinates
       float ro = measurement_pack_list[k].raw_measurements_(0);
       float phi = measurement_pack_list[k].raw_measurements_(1);
       out_file_ << ro * cos(phi) << "\t"; // p1_meas

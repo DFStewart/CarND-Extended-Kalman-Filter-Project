@@ -44,6 +44,20 @@ private:
   Eigen::MatrixXd R_radar_;
   Eigen::MatrixXd H_laser_;
   Eigen::MatrixXd Hj_;
+
+  float noise_ax_;
+  float noise_ay_;
+
+  /**
+  * Get measurement from radar for use in Kalman Filter
+  */
+  Eigen::VectorXd GetRadarMeasurement();
+
+  /**
+  * Get measurement from laser for use in Kalman Filter
+  */
+  Eigen::VectorXd GetLaserMeasurement();
+
 };
 
 #endif /* FusionEKF_H_ */
